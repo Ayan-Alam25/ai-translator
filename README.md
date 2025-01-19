@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Translator
 
-## Getting Started
+![AI Translator Screenshot](public/screenshot.png)
 
-First, run the development server:
+AI Translator is an advanced AI-powered application designed to deliver fast, accurate, and context-aware translations. It supports multiple languages, includes features like translation saving, user authentication, and voice recording. Built with cutting-edge technologies, the app ensures a seamless and efficient user experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Multiple Language Support**: Translate text into various languages with high accuracy.
+- **Save Translations**: Save and access your translations anytime.
+- **User Authentication**: Secure login and signup functionality using ClerkAuth.
+- **Voice Recorder**: Record voice input for translations.
+- **AI-Powered**: Leverages Gemini AI for accurate and context-aware translations.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend**: [Next.js](https://nextjs.org/), [React.js](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/)
+- **Authentication**: [ClerkAuth](https://clerk.dev/)
+- **AI Engine**: Gemini AI
+- **Database**: [Neon DB](https://neon.tech/)
 
-## Learn More
+## Installation and Setup
 
-To learn more about Next.js, take a look at the following resources:
+Follow these steps to set up and run the project locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Ayan-Alam25/ai-translator.git
+   cd ai-translator
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **Environment Variables**:
+     Create a .env.local file in the root directory and add the following variables:
+    ```bash
+    GOOGLE_GENERATIVE_AI_API_KEY=
+    DATABASE_URL=
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+    CLERK_SECRET_KEY=
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the Development Server**:
+    ```bash
+    npm run dev
+    ```
+    The app will be available at http://localhost:3000.
+   
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Login/Signup**: 
+   - Use ClerkAuth to log in or sign up to the app.
+   
+2. **Select Languages**: 
+   - Choose the input and target languages for translation.
+
+3. **Enter Text or Use Voice Recorder**: 
+   - Type the text you want to translate or use the voice recorder to input speech.
+
+4. **View Translation**: 
+   - The app will display the translated text.
+
+5. **Save Translations**: 
+   - You can save your translations for future reference.
+
+---
+
+## Deployment
+
+1. **Vercel Deployment**:  
+   To deploy the app on Vercel, follow these steps:
+   
+   - Sign up or log in to [Vercel](https://vercel.com/).
+   - Click on "New Project" and select this GitHub repository.
+   - Follow the instructions to deploy.
+   
+2. **Manual Deployment**:  
+   If you'd like to deploy the app manually on a different platform, follow these steps:
+   
+   - Push the code to your desired hosting provider.
+   - Ensure the environment variables like ClerkAuth and Neon DB URL are set properly in the hosting platform's environment settings.
